@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My site</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>RUDI - seine Internetseite</h1>
+      
+      <iframe src="https://docs.google.com/viewer?url=https://anatolysimka.github.io/de/bwl.pdf&embedded=true" 
+style="width: 600px; height: 600px;" frameborder="0">Ваш браузер не поддерживает фреймы</iframe>
+      <p><a href='bwl.pdf'>BWL</a></p>
+      <p><a href='https://anatolysimka.github.io/de/bwl.pdf#page=4'>BWL_page4</a></p>
+      
+    </header>
+    <main>
+      <h2>RUDI IST EIN SEHR HÜBSCHER KATER!</h2>
+      <h2>DAS IST KLAR!</h2>
+      <table border="0">
+            <td><img src="RUDI.jpg"></td>
+      </table>
+      <p></p>
+<form id="demo"></form>
+      <p></p>
+<script>
+document.getElementById("demo").innerHTML = "RUDI hat dieses Rätsel für Dich verfasst:";
+</script>
+      <dev><input type="button" value="AUS" onclick="dawn(this)"></dev>
+    <p></p>
+      <script>
+        a='MAUS', b='FRASS NICHT', c='FIDO', d='HUND', e='AUS'
+        function dawn(input)
+        {input.value = input.value != 'AUS' ? 'AUS' : 'EIN'
+        e = input.value}
+        function up(input)
+        {input.value = input.value != 'HUND' ? 'HUND' : 'KATER'
+        d = input.value}
+        function fido(input)
+        {input.value = input.value != 'FIDO' ? 'FIDO' : 'RUDI'
+        c = input.value}
+        function njam(input)
+        {input.value = input.value != 'FRASS NICHT' ? 'FRASS NICHT' : 'FRASS'
+        b = input.value}
+        function food(input)
+        {input.value = input.value != 'MAUS' ? 'MAUS' : 'KÄSE'
+        a = input.value}
+        function itog(input)
+        {if (a == 'KÄSE' && b == 'FRASS' && c == 'RUDI' && d == 'KATER' && e == 'EIN')
+        {document.getElementById("smotri").innerHTML = 'RICHTIG!',
+        document.getElementById("demo").innerHTML = 'RÄTSEL GELÖST! NUN KANN RUDI BALDRIANTROPFEN LECKEN!'
+        f = 'RÄTSEL GELÖST'}
+        else if (e == "AUS") {document.getElementById("smotri").innerHTML = 'SCHALTE MICH EIN!',
+        document.getElementById("demo").innerHTML = 'BITTE EINSCHALTEN!'
+        f = 'RÄTSEL NICHT GELÖST'}
+        else if (d == 'HUND') {document.getElementById("smotri").innerHTML = 'WAS HAT HIER EIN HUND ZU SUCHEN?!!!',
+        document.getElementById("demo").innerHTML = 'FALSCH'
+        f = 'RÄTSEL NICHT GELÖST'}
+        else if (b == 'FRASS NICHT') {document.getElementById("smotri").innerHTML = 'WIESO FRASS ICH NICHT?!',
+        document.getElementById("demo").innerHTML = 'FALSCH'
+        f = 'RÄTSEL NICHT GELÖST'}
+        else if (a == 'MAUS') {document.getElementById("smotri").innerHTML = 'MÄUSE WERDEN NICHT GEFRESSEN<br>ABER ZUM HERRN MENSCHEN GEBRACHT!',
+        document.getElementById("demo").innerHTML = 'FALSCH'
+        f = 'RÄTSEL NICHT GELÖST'}
+        else if (c == 'FIDO') {document.getElementById("smotri").innerHTML = 'FIDO KENNEN WIR NICHT!',
+        document.getElementById("demo").innerHTML = 'FALSCH'
+        f = 'RÄTSEL NICHT GELÖST'}}
+      </script>
+        <dev><input type="button" id="kot" value="HUND" onclick="up(this)"></dev>
+        <dev><input type="button" value="FIDO" onclick="fido(this)"></dev>
+        <dev><input type="button" value="FRASS NICHT" onclick="njam(this)"></dev>    
+        <dev><input type="button" value="MAUS" onclick="food(this)"></dev><dev>&nbsp;&nbsp;&nbsp;&nbsp;</dev><button value="ERGEBNIS" onclick="itog(this), playPause()">ERGEBNIS</button>
+    <section id="smotri">HIER WIRD DEINE ANTWORT ERSCHEINEN</section>
+    <p></p>
+  <video id="video1" width="713" height="400">
+    <source src="kot.mp4" type="video/mp4">
+  <script>
+    var myVideo = document.getElementById("video1");
+    function playPause() {
+    if (f == 'RÄTSEL GELÖST')
+    myVideo.play();
+    else
+    myVideo.pause();
+}
+</script>
+
+</main>
+  </body>
+</html>
